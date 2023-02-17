@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			border:1px solid #000000;
+			padding:10px;
+			margin:10px;
+			overflow:scroll;
+		}
+
+		#btn{
+			position:fixed;
+			top:200px;
+			left:30px;
+		}
+
+	</style>
+</head>
+<body style="height:2000px;">
+	<div id="box">
+	<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+			<p>内容</p>
+		</div>
+		<button id="btn">回到頂部</button>
+		<script type="text/javascript">
+			
+			window.onscroll = function(){
+				//console.log(document.documentElement.scrollTop);
+				//console.log(document.body.scrollTop); safari瀏覽器
+			}
+
+			var docScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			console.log(docScrollTop);
+			var btn = document.getElementById('btn');
+			btn.onclick = scrollTop;
+
+			function scrollTop(){
+				//回到最上面
+				if(docScrollTop){
+					// document.documentElement.scrollTop = 0;
+						// document.body.scrollTop = 0;
+						// 簡便寫法
+					document.documentElement.scrollTop = document.body.scrollTop = 0;
+				}
+			}
+		</script>
+</body>
+</html>
